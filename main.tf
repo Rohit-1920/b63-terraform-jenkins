@@ -85,7 +85,7 @@ resource "aws_iam_role_policy_attachment" "example-AmazonEKSWorkerNodeMinimalPol
   role       = aws_iam_role.node-b63.name
 }
 
-resource "aws_eks_node_group" "node" {
+resource "aws_eks_node_group" "node_group" {
   cluster_name    = aws_eks_cluster.cluster1.name
   node_group_name = "node_group"
   node_role_arn   = aws_iam_role.node-b63.arn
